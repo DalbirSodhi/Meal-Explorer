@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import MealCard from "../components/MealCard";
 
 export default function MealList() {
+    // object destructuring to get the category from the search params
     const { category } = useLocalSearchParams();
 
     const [meals, setMeals] = useState([]);
@@ -56,6 +57,7 @@ export default function MealList() {
                 keyExtractor={(item) => item.idMeal}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.listContent}
+                // render each meal item using the MealCard component
                 renderItem={({ item }) => (
                     <MealCard
                         meal={item}
@@ -68,28 +70,28 @@ export default function MealList() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFF8F0",
-    paddingHorizontal: 16,
-    paddingTop: 16,
-  },
+    container: {
+        flex: 1,
+        backgroundColor: "#FFF8F0",
+        paddingHorizontal: 16,
+        paddingTop: 16,
+    },
 
-  loadingContainer: {
-    flex: 1,
-    backgroundColor: "#FFF8F0",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    loadingContainer: {
+        flex: 1,
+        backgroundColor: "#FFF8F0",
+        justifyContent: "center",
+        alignItems: "center",
+    },
 
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#D35400",
-    marginBottom: 18,
-  },
+    title: {
+        fontSize: 28,
+        fontWeight: "bold",
+        color: "#D35400",
+        marginBottom: 18,
+    },
 
-  listContent: {
-    paddingBottom: 20,
-  },
+    listContent: {
+        paddingBottom: 20,
+    },
 });
