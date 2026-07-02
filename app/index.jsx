@@ -5,7 +5,7 @@ import { router } from "expo-router";
 export default function Index() {
   const categories = ["Chicken", "Beef", "Vegetarian"];
 
- const goToList = (category) => {
+  const goToList = (category) => {
     router.push({
       pathname: "/meal-list",
       params: { category: category },
@@ -17,7 +17,7 @@ export default function Index() {
       <Text style={styles.title}>Meal Explorer</Text>
 
       <Text style={styles.subtitle}>
-        Pick a category
+        Discover delicious recipes for every craving
       </Text>
 
       {categories.map((category) => (
@@ -38,32 +38,40 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#FFF8F0",
     alignItems: "center",
-    paddingTop: 60,
+    paddingTop: 5,
+    paddingHorizontal: 24,
   },
 
   title: {
-    fontSize: 26,
+    fontSize: 32,
     fontWeight: "bold",
-    marginBottom: 8,
+    color: "#D35400",
+    marginBottom: 20,
+    marginTop: 10,
+    paddingTop: 10,
   },
 
   subtitle: {
-    fontSize: 16,
-    marginBottom: 20,
+    fontSize: 17,
+    color: "#555555",
+    marginBottom: 32,
+    paddingTop: 40,
   },
 
   button: {
-    backgroundColor: "#007bff",
-    paddingVertical: 12,
-    paddingHorizontal: 40,
-    borderRadius: 6,
-    marginBottom: 12,
+    width: "100%",
+    backgroundColor: "#E67E22",
+    paddingVertical: 26,
+    borderRadius: 20,
+    marginBottom: 44,
+    alignItems: "center",
   },
 
   buttonText: {
     color: "#ffffff",
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
   },
 });
