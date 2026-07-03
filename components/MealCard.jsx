@@ -15,7 +15,7 @@ export default function MealCard({ meal, onPress }) {
       {mealName}
     </Text>
 
-    <Text style={styles.arrow}>›</Text>
+    
   </Pressable>
 );
 }
@@ -44,11 +44,5 @@ const styles = StyleSheet.create({
     fontSize: 19,
     fontWeight: "600",
     color: "#333333",
-  },
-
-  arrow: {
-    fontSize: 10,
-    color: "#E67E22",
-    marginLeft: 8,
   },
 });
